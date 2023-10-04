@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="This is a page about ...">
+    <title>Document</title>
+    <!-- Inline CSS styling will take priority over the stuff contained within the style elements -->
+    <style>
+        nav {
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            background-color: blanchedalmond;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* ">" indicates that you are trying to only access the direct child of the parent */
+        nav>ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: .5rem;
+        }
+
+        /* A space indicates that "li" is within "nav", it dosent need to be a direct child */
+        nav li,
+        ol li {
+            background-color: #e6b5b5;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        /* element selector */
+        span {
+            width: 250px;
+            display: block;
+        }
+
+        /* class selector */
+        .title {}
+
+        /* A ombination of class and element */
+        /* A "." in front of a name in styles indicates a class */
+        nav.menu {}
+
+        /* id selector */
+        /* "#" indicates an ID */
+        nav#top-menu {}
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link,
+        a:visited {
+            color: chartreuse;
+        }
+
+        a:hover {
+            color: azure;
+        }
+
+        a:active {
+            color: brown;
+        }
+
+        #featured-content {
+            background-color: #959595;
+            border: 2px dashed red;
+            padding: .5rem;
+            border-radius: .8rem;
+        }
+
+        table {
+            width:100%;
+            border: 1px solid red;
+            border-radius: .8rem;
+            border-collapse: collapse;
+            
+        }
+        td {
+            border: 1px solid red;
+            border-radius: .8rem;
+            text-align: center;
+            padding: .8rem;
+        }
+
+        tr:nth-child(even) { /* This will change the color of all even numbers in the table */
+            color: #959595; 
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="menu" id="top-menu">
+            <!-- "nav" just acts as organization and readibility within the html document. This will be home to the navigation bar. We added a class attribute titled "menu", any CSS changes made will only impact this class  -->
+            <ul>
+                <li><a href="https://weber.edu" target="aside">Home</a></li> <!--"target="blank"" will open a new tab to execute the link, aside will only allow one tab to pen, and wll refresh every click afterwards -->
+                <li><a href="#data">Sports</a></li> <!--"#" Just indicates that the link wont navigate anywhere-->
+                <li><a href="#featured-content">Featured</a></li> <!--This will scroll the page to the specified section-->
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <h1>
+            <span>
+                <img src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80"
+                    alt="A photo of a football.">
+            </span>
+            <br>Football
+        </h1>
+    </header>
+    <hr> <!-- "hr" = horizontal row -->
+    <section id="featured-content">
+        <p>Lorem ipsum dolor sit, amet <em>adipisicing</em> <!-- "em" = emphasize, this will add italics --> elit.
+            Officiis ad mollitia atque numquam recusandae minima reiciendis, nulla odio similique vel accusantium velit
+            dolore quaerat voluptate, sit non nihil blanditiis repudiandae!
+            Illum rerum assumenda magnam aut <strong>cupiditate</strong> <!-- This will bold the text -->, harum animi
+            maiores consequatur natus iure voluptatum esse sit unde sequi nam corporis, pariatur veritatis doloremque!
+            Ullam eius officia adipisci, quia officiis autem unde.
+            Excepturi facere quisquam quos, <small>neque,</small> <!-- This will shrink the text --> fugit, nobis
+            aperiam asperiores dolorum quae repellat provident! Laborum fugit porro odio nostrum. Deleniti quisquam nam
+            inventore quas tempore possimus accusantium ipsum magnam nihil ex!</p>
+    </section>
+    <h2>Unordered List:</h2>
+    <ul>
+        <li>Lorem ipsum dolor sit <mark>amet consectetur</mark> <!-- This will highlight the text --> adipisicing elit.
+            Odio veritatis laboriosam dolor, officiis ad incidunt, alias eaque adipisci quaerat, temporibus numquam
+            explicabo repellat culpa neque sint hic corrupti ullam laudantium!</li>
+        <li>Lorem, ipsum dolor sit <s>amet consectetur</s> <!-- This will cross out the text --> adipisicing elit. Quam
+            animi sunt nam labore. Cupiditate, amet sunt. Voluptas quae aliquam beatae odio velit suscipit vel,
+            repellendus amet sit, est ullam. Earum.</li>
+        <li>Lorem ipsum dolor sit <code>print("Hello Word")</code>
+            <!-- This will display the text with a "coded" font --> amet, consectetur adipisicing elit. Alias
+            voluptatibus magni ad omnis sint rem quod eius incidunt expedita, nemo, ut velit suscipit aut? Quae quaerat
+            obcaecati alias voluptas quasi!</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus quisquam aut soluta repellat
+            doloremque vel! Quasi, molestias, veniam nemo nesciunt aliquid repellendus, magni necessitatibus cum maxime
+            sed ea! Neque, explicabo?</li>
+        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, eveniet est quod reprehenderit voluptatem
+            veritatis doloribus ut atque sint voluptas animi consequatur sapiente ad distinctio veniam praesentium
+            ratione consectetur. Quas!</li>
+    </ul>
+    <h2>Ordered List:</h2>
+    <ol>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, laboriosam quisquam provident ut quidem
+            voluptatem. In commodi asperiores, et omnis molestias expedita, suscipit, exercitationem eos inventore
+            aliquam iure consequuntur tempore.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, ut quis pariatur dicta alias nesciunt
+            dignissimos iste id accusamus quia magni numquam adipisci eius deserunt est animi architecto, a officia.
+        </li>
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, corrupti alias quibusdam, modi, sapiente
+            delectus omnis culpa officia odio obcaecati molestias porro in dolorum aut quod dignissimos cumque neque
+            quo.</li>
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus est veritatis, ab cumque rem, animi
+            porro reiciendis fugiat laboriosam saepe nulla repellendus ullam placeat eum ex possimus molestiae.
+            Reprehenderit, rem.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel placeat, dolor debitis rem corrupti aperiam
+            voluptatibus minus! Quis nihil itaque sequi officiis corrupti. Doloribus asperiores porro in rem. Quae,
+            debitis?</li>
+    </ol>
+    <h2>Definition List:</h2>
+    <dl> <!-- "dl" = definition list, "dt" = definition term, "dd" = definition description-->
+        <dt>Football</dt>
+        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum dicta repudiandae vel soluta illum
+            voluptatum numquam, nobis, illo vitae nesciunt adipisci aliquid temporibus, facere libero! Delectus quisquam
+            officiis facere laborum?</dd>
+        <dt>Soccer</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ratione sapiente enim qui nihil aspernatur
+            dolor et sed. Eligendi earum tempora corporis culpa eius voluptates blanditiis ex possimus quis commodi?
+        </dd>
+    </dl>
+    <article id="data">
+        <table>
+            <thead>
+                <tr>
+                    <th>x one</th>
+                    <th>x two</th>
+                    <th>x three</th>
+                    <th>x four</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td colspan="2">3 and 4</td> <!--This will merge the two cells-->
+                </tr>
+                <tr>
+                    <td colspan="2">2 and 4</td>
+                    <td>4</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td colspan="2">3</td>
+                    <td>6</td>
+                    <td>9</td>
+                    
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>12</td>
+                    <td>16</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+
+    </article>
+    <footer>
+        <nav>
+            <ul class="menu">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </nav>
+        &copy; All rights reserved. &trade;
+        <!-- "&" is how to insert a special character. Note: CTRL + space will pull up emmets window -->
+    </footer>
+</body>
+
+</html>
+
+<!--Inline: Elements that sit side by side on the page (Example: images)
+    Block:  Elements that stack on top of each other within the page (Example: paragraph)
+    REM: Is a unit of measurment such as PX or %. while using this during styling, it will make the edited element responsive (Example: While zooming)
+-->

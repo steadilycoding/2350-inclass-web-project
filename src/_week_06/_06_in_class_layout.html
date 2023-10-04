@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            background-color: blanchedalmond;
+        }
+
+        .primary {
+            background-color: aqua;
+        }
+
+        .secondary {
+            background-color: blue;
+        }
+
+        aside {
+            background-color: lightgrey;
+        }
+
+        footer {
+            background-color: aquamarine;
+        }
+
+        /* For mobile */
+
+        aside {
+            display: none; 
+        }
+
+        header, footer {
+            height: 80px;
+            line-height: 80px;
+        }
+
+        body { 
+            height: 100vh; /* View Height */
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        .content {
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 1;
+        }
+
+        .main {
+            display: flex;
+            flex-flow: column nowrap;
+            height: calc(100vh - 160px); /* 100% of the widow / 160 px (line 42 & 43) */
+        }
+
+        .primary {
+            flex: 3;
+        }
+
+        
+        .secondary {
+            flex: 1;
+        }
+
+        /* For Desktop */
+
+        @media screen and (min-width: 600px) { /* this is saying: if screen width > 600 px: do something */
+            aside {
+                display: block;
+                width: 100px;
+            }
+
+            .content {
+                flex-flow: row nowrap;
+            }
+
+            .main {
+                flex: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <div class="content">
+        <div class="main">
+            <div class="primary">Primary</div>
+            <div class="secondary">Secondary</div>
+        </div>
+        <aside>Aside</aside>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>

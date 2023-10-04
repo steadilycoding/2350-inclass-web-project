@@ -1,0 +1,128 @@
+main {          /* This is a ruleset, a ruleset has a selector, and one or more css properties */
+    width: 90%;
+    margin: 0 auto; /* '0' indicates the top and bottom, 'auto' indicates left to right */
+}
+
+* {             /* '*' means that updates will be applied to every element in within the page */
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+header {
+    padding: 10px;
+    color: maroon;
+}
+
+header > .top > span:nth-child(2) {     /* '>' indicates that you want to access a direct child of an element */
+    float: right;
+}
+
+header > h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;                    /* this means 4X the normal body text */
+    font-weight: normal;
+    text-align: center;
+    border-top: 2px solid maroon;
+    padding-top: 1rem;                  /* 1rem = 16 px */
+    margin: 10px 0 5px 0;               /* This order of operation works clockwise starting at twelve oclock being the first */
+
+}
+
+header > h1 > .subtitle {
+    display: block;
+    font-size: 1.5rem;
+    border-top: 1px solid maroon;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.toph > img {
+    width: 100%;                        /* This will make the img responsive and scale to 100% of the page */
+}
+
+/* Cards */
+
+.cards {
+    text-align: center;
+}
+/* This will create the square cards themselves */
+.cards > div {
+    display: inline-block;
+    width: 30%;
+    background-color: grey;
+    margin: 10px;
+    padding: 10px;
+    vertical-align: top;
+    height: 250px;
+}
+/* This will align all of the text within the cards */
+.cards > div > ul, .cards > div > p {
+    text-align: left;
+}
+/* This is for the circles on the cards */
+.cards > div > h1 {
+    background-color: white;
+    border: 1px solid white;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    line-height: 60px;
+    display: inline-block;
+}
+
+/* END OF CARDS */
+
+
+blockquote {
+    font-size: 2rem;
+    color: maroon;
+    text-align: center;
+}
+
+blockquote::before, blockquote::after { /* '::' is a psedo element */
+    content: '"';
+    font-size: 2rem;
+    color: gray;
+}
+
+table {
+    width: 98%;
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+table > thead {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rosybrown;
+}
+
+thead  th, tbody  td {
+    padding: 10px 0;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+ 
+tbody tr:nth-child(even) {
+    background-color: grey;
+}
+
+.highlighted {
+    background-color: thistle;
+    margin: 10px;
+    padding: 10px;
+    overflow: auto;             /* This will auto fix an image that is floating "outside" the anticipated area */
+}
+
+.highlighted img {
+    float: right;
+    border: 2px dashed green;
+    margin: 1rem;
+}

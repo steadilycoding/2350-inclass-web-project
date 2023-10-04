@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        ul {
+            display: flex;
+            list-style: none;
+            flex-flow: row nowrap;
+        }
+
+        ul li {
+            padding-right: .5rem;
+
+        }
+
+        nav ul li:nth-child(3) { 
+            flex: 1;
+        }
+
+        .card {
+            width: 30%;
+            padding: .5rem;
+            border: 1px solid black;
+        }
+
+        .cards {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Trainng</li>
+            <li>Projects</li>
+            <li>About</li>
+            <li>Login</li>
+        </ul>
+    </nav>
+
+    <div class="cards" style="display: flex;">
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, corporis? Maxime perferendis totam maiores ullam velit temporibus alias laborum magnam. Quia voluptatem vitae quos possimus a dolor assumenda! Iusto, eveniet!</p>
+        </div>
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus doloribus est velit magnam animi reiciendis ullam quam maiores ut omnis, voluptate nulla tempore exercitationem itaque quia minima vel fugit. Odio?
+            Necessitatibus similique, blanditiis molestiae repudiandae rerum hic, consectetur alias quo vitae temporibus, facilis labore ipsum accusamus eius deserunt? Recusandae quas perferendis quidem vitae ducimus beatae soluta provident, omnis nesciunt aperiam.
+            Consequuntur pariatur modi nostrum porro ullam accusantium, esse corrupti quia praesentium harum delectus obcaecati illo quaerat. Error, iste distinctio. Dolore ducimus voluptatum dignissimos ipsam quae delectus modi eaque accusamus debitis.</p>
+        </div>
+        <!-- <div class="card">
+            <h2>card 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab earum iste reprehenderit voluptatem obcaecati vel ducimus, nisi, nam veritatis beatae a ipsam laudantium voluptatum, dignissimos totam eaque voluptas distinctio nesciunt?
+            Cupiditate assumenda impedit, velit tempora, aliquid, rem amet voluptates eaque perspiciatis saepe enim fugiat modi ex sit quod labore iusto ut laudantium animi in minima sunt facere iste? Voluptatem, eligendi.</p>
+        </div> -->
+
+        <ul class="card" style="display: flex;"> <!--This is a nested flex container-->
+            <li>Home</li>
+            <li>Trainng</li>
+            <li>Projects</li>
+            <li>About</li>
+            <li>Login</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
