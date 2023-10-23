@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Sample blog landing page using Flexbox.">
+
+    <title>Your Name - Blog</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: orange;
+        }
+
+        .main-content {
+            display: flex;
+            flex-flow: column;
+            gap: 20px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #e2e2e2;
+            margin: 10px;
+        }
+
+        .blog-post {
+            flex: 3;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .blog-post img {
+            flex: 1;
+            max-width: 25%;
+            border-radius: 5%;
+        }
+
+        .post-content {
+            flex: 2;
+        }
+
+        .sidebar {
+            flex: 1;
+            flex-direction: column; 
+            padding-left: 20px;
+            border: 1px solid black;
+            border-radius: 2%;
+            background-color: #e2e2e2;
+        }
+
+        .sidebar img {
+            width: 25%;
+            border-radius: 5%;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: orange;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        h4 {
+            color: lightgray;
+        }
+
+        footer {
+            background-color: darkgrey;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+            margin-left: 10px;
+            display: inline-block;
+        }
+
+        .copy {
+            display: inline;
+            padding-left: 73%;
+            color: white;
+        }
+
+        /* Mobile first */
+        @media (max-width: 500px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .blog-post, .sidebar {
+                flex: none;
+                width: 100%;
+            }
+
+            .blog-post {
+                flex-direction: column;
+            }
+
+            .blog-post img {
+                max-width: 100%;
+            }
+
+            .sidebar {
+                border-left: none;
+                padding-left: 0;
+                border: 1px solid black;
+                border-radius: 5%;
+                background-color: #e2e2e2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Recent posts</a>
+            <a href="#">Old posts</a>
+            <a href="#">Contact us</a>
+            <a href="#">About us</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="blog-post">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1948&q=80" alt="Sample Image 1">
+            <div class="post-content">
+                <h2>First post with image</h2>
+                <h4>By Adam Smith, Jan 1 2021</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus vitae eveniet dolor, maxime temporibus atque nostrum illo placeat explicabo officiis asperiores nihil, natus nisi quibusdam nesciunt totam fugit inventore. Possimus.
+                Fugit quam omnis ab vero voluptas dolor voluptates sint mollitia laudantium commodi ipsum nemo, nobis, a ex natus nostrum doloremque quasi accusantium dolorum quia asperiores doloribus porro cupiditate quisquam! Repellat.</p>
+                <button>Read More</button>
+            </div>
+        </div>
+
+        <hr>
+        
+        <div class="blog-post">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Sample Image 2">
+            <div class="post-content">
+                <h2>Second post with image</h2>
+                <h4>By John Doe, Jan 1 2021</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, libero adipisci nemo qui accusamus deserunt repellat exercitationem mollitia odio, recusandae ea veritatis sed culpa dolor laboriosam minus quisquam ducimus. Ea?
+                Repellendus voluptatem eveniet adipisci tenetur, unde omnis asperiores rem modi nobis consectetur possimus ipsam pariatur aut architecto inventore ducimus fuga deleniti dolores, sint in nisi! Mollitia molestias doloribus vitae cum?</p>
+                <button>Read More</button>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>Secondary content here</h3>
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Sample Image 3">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At saepe cum aliquid totam hic labore iure quas! Quibusdam eos, quisquam excepturi earum eligendi architecto hic eveniet cum, odit consequuntur magnam.
+            Nisi, magni similique et voluptatem ex quos qui numquam veritatis corporis harum, quas ea. Nulla eveniet iusto natus id accusantium. Soluta beatae fugit atque nesciunt dignissimos facere, minus tempora maiores!</p>
+        </div>
+    </div>
+
+    <footer>
+            <a href="#">Facebook</a>
+            <a href="#">Twiiter</a>
+            <a href="#">YouTube</a>
+            <p class="copy">&copy;All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

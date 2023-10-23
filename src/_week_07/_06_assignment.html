@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <style>
+
+        html {
+            margin: 0%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: lightblue;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            background-color: white;
+        }
+
+        .navbar-left, .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu {
+            width: 30%;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5%;
+            margin: 5%;
+            background-color: white;
+        }
+
+        .menu a {
+            text-decoration: none;
+        }
+
+        .menu ul li {
+            list-style-type: none;
+        }
+
+        .form-container {
+            width: 65%;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5%;
+            padding: 5%;
+            margin: 5%;
+            background-color: white;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="text"], 
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .form-container input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-footer input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="navbar-left">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Services</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="navbar-right">
+        <a href="#">Sign In</a>
+        <a href="#">Sign Up</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="menu">
+        <h3>Main menu</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+        <h3>Featured projects</h3>
+        <ul>
+            <li><a href="#">Project A</a></li>
+            <li><a href="#">Project B</a></li>
+            <li><a href="#">Project C</a></li>
+            <li><a href="#">Project D</a></li>
+            <li><a href="#">Project F</a></li>
+            <li><a href="#">Project G</a></li>
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h3>Contact Us Form</h3>
+        <label>Name</label>
+        <input type="text" placeholder="Type name here">
+        <label>Username</label>
+        <input type="text" placeholder="Text input">
+        <label>Are you a member?</label>
+        <input type="radio" name="member" value="yes"> Yes 
+        <input type="radio" name="member" value="no"> No
+        <label>Email</label>
+        <input type="text" placeholder="Email input">
+        <label>Message</label>
+        <textarea placeholder="Textarea"></textarea>
+        <div class="form-footer">
+            <label><input type="checkbox"> I agree to the terms and conditions</label>
+            <div>
+                <button class="btn">Submit</button>
+                <button class="btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>&copy; 2021 - CS 2350 - All rights reserved</footer>
+
+</body>
+</html>
