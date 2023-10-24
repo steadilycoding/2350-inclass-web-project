@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: bisque;
+        }
+
+        footer {
+            font-family: cursive;
+            font-size: 10px;
+            background-color: black;
+            color: wheat;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>12 by 12 Multiplication Table</h1>
+
+     <!-- Line 12 creates a container outside of the script to hold our table -->
+    <div id="table-container"></div>
+
+    <script>
+
+        // Line 13 defines the size of the table 
+        const tableSize = 12;
+
+        // Line 16 will get a reference to an HTML element where the table is going to be displayed.
+        const tableContainer = document.getElementById("table-container")
+
+        // Line 19 creates a table element
+        const table = document.createElement("table")
+
+        // Line 74 - 89 creates the multiplication table using a nested for loop
+
+        for (let r = 1; r <= tableSize; r++) {
+            const row = document.createElement("tr")
+
+            const headerCell = document.createElement("th");
+            headerCell.textContent = r;
+            row.appendChild(headerCell)
+
+            for (let c = 1; c <= tableSize; c++) {
+                const result = r * c;
+                const cell = document.createElement("td")
+                cell.textContent = result 
+                row.appendChild(cell)
+            }
+
+            table.appendChild(row)
+        }
+
+        // Line 92 appends the multiplication table to tableContainer that is outside of our script 
+        tableContainer.appendChild(table);
+    </script>
+
+    <footer>
+        <h1>Austin Sexton / CS 2350</h1>
+        <h3>&copy; Austin Sexton 2023 | All Rights Reserved</h3>
+    </footer>
+
+</body>
+</html>
