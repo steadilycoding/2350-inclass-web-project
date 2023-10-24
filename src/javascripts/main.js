@@ -30,6 +30,8 @@ function printCharacters(quote) {
     return out
 }
 
+// This is a minor edit 
+
 console.log(printCharacters("To be or not to be!"))
 
 // let i = 0
