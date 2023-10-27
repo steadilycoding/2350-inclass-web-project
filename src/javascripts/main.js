@@ -1,83 +1,78 @@
-//TODO - Your ES6 JavaScript code (if any) goes here
-import "bootstrap"
-
-// Define variables
-let n = 10
-const h = 100
-let is_active = true
-
-if (is_active) {
-
-}
-
-if (!is_active) {
-
-}
-
-if (n % 2 == 0) {
-    console.log(n, " is an even number.")
-}
-else {
-    console.log(n, " is an odd number.")
-}
-
-function printCharacters(quote) {
-    let out = ""
-    for(let i = 0; i < quote.length; i++){
-        out += quote[i] + '\n'
+// Function that takes three integers and returns the largest int 
+function getMax(x, y, z) {
+    if (x > y && x > z) {
+        return x
     }
 
-    return out
+    else if (y > x && y > z) {
+        return y
+    }
+
+    else {
+        return z
+    }
 }
 
-console.log(printCharacters("To be or not to be!"))
+// Function that takes three integers and returns the smallest int
+function getMin(x, y, z) {
+    if (x < y && x < z) {
+        return x
+    }
 
-// let i = 0
-// while(i < quote.length){
-//     console.log(quote[i])
-//     i++
-// }
+    else if (y < x && y < z) {
+        return y
+    }
 
-// i = 0
-// do {
-//     console.log(quote[i])
-//     i++
-// } while (i < quote.length)
-
-// console.log(quote, " has ", quote.length, " Characters")
-
-// console.log(quote.charAt(0))
-// console.log(quote[0])
-
-let day = 1
-
-if (day == 1 || day == 7) {
-    console.log("Weekend")
-}
-else if (day > 1 && day < 7){
-    console.log('a week day')
-}
-else {
-    console.log("invalid")
+    else {
+        return z
+    }
 }
 
-switch(day){
-    case 1: 
-        console.log("Weekend")
-        break;
-    case 2:
-        console.log("Weekday")
-        break;
-    default:
-        console.log("Invalid")
+// Function that takes three integers and returns the average 
+function getMean(x, y, z) {
+    return (x + y + z) / 3
 }
 
-function calculateY(){
+// Function that takes two strings and returns 0 if the words are the same; 
+// returns 1 if word1 is greater than word2; and returns -1 if word1 is smaller than word2
+function compare(word1, word2) {
+    if (word1.length == word2.length) {
+        return 0
+    }
 
-let x = parseInt(document.querySelector("input").value)
-let y = 4 * x + 12
+    else if (word1.length > word2.length) {
+        return 1
+    }
 
-document.querySelector(".result").innerHTML = y
+    else {
+        return -1
+    }
 }
 
-document.querySelector("#get-result").onclick = calculateY
+// TODO: 2 more functions remaining (Refer to week 9 module in CS 2350)
+
+// ~~~~~~~ Here is the console tests for each of the function above. ~~~~~~~~
+
+// Test One
+console.log("Test One:")
+console.log(getMax(99,55,22), ' is the largest number out of 99, 55, and 22')
+console.log(getMax(11,76,42), ' is the largest number out of 11, 76, and 42')
+console.log(getMax(12,46,115), ' is the largest number out of 12, 46, and 115')
+
+// Test Two
+console.log("\nTest Two:")
+console.log(getMin(22,55,99), ' is the smallest number out of 22, 55, and 99')
+console.log(getMin(72,11,42), ' is the smallest number out of 72, 11, and 42')
+console.log(getMin(115,46,12), ' is the smallest number out of 115, 46, and 12')
+
+// Test Three
+console.log("\nTest Three:")
+console.log(getMean(22,55,99), ' is the average out of 22, 55, and 99')
+console.log(getMean(72,11,42), ' is the average out of 72, 11, and 42')
+console.log(getMean(115,46,12), ' is the average out of 115, 46, and 12')
+
+// Test Four 
+console.log("\nTest Four:")
+console.log(compare('Gigantic', 'World'), " 'Gigantic' > 'World'")
+console.log(compare('Hello', 'World'), " 'Hello' == 'World'")
+console.log(compare('Tiny', 'World'), " 'Tiny' < 'World'")
