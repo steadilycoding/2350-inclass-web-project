@@ -49,7 +49,54 @@ function compare(word1, word2) {
     }
 }
 
-// TODO: 2 more functions remaining (Refer to week 9 module in CS 2350)
+// Function that returns a multi-line string with each character of the string written on its own line.
+// if 'indent' is == true, each line will be preceded by diagonal indentation
+function getCharPerLine(str, indent) {
+    if (!indent) {
+        const myCharacters = str.split('')
+        for(let i = 0; i < str.length; i++) {
+            if (myCharacters[i] != ' ')
+                console.log(myCharacters[i])
+        }
+    }
+
+    else {
+        const myCharacters = str.split('')
+        let mySpace = ' '
+        for(let i = 0; i < str.length; i++) {
+            if (myCharacters[i] != ' ') {
+                console.log(mySpace, myCharacters[i])
+                mySpace += ' '
+            }
+        }
+    }
+}
+
+// Function that returns a multi-line string containing a right-pointing arrow made using asterisks.
+function arrow(size) {
+    let i = 1
+    while (i <= size) {
+        let asterisks = ''
+        for (let j = 1; j <= i; j++) {
+            asterisks += '*'
+        }
+        console.log(asterisks)
+        i++
+    }
+
+    i = size - 1
+    
+    while (i >= 1) {
+        let asterisks = ''
+        for (let j = 1; j <= i; j++) {
+            asterisks += '*'
+        }
+        console.log(asterisks)
+        i--
+    }
+}
+
+
 
 // ~~~~~~~ Here is the console tests for each of the function above. ~~~~~~~~
 
@@ -76,3 +123,14 @@ console.log("\nTest Four:")
 console.log(compare('Gigantic', 'World'), " 'Gigantic' > 'World'")
 console.log(compare('Hello', 'World'), " 'Hello' == 'World'")
 console.log(compare('Tiny', 'World'), " 'Tiny' < 'World'")
+
+// Test Five
+console.log("\nTest Five:")
+getCharPerLine("Hello World!", false)
+getCharPerLine("Hello World!", true)
+
+// Test Six
+console.log("\nTest Five:")
+arrow(5)
+console.log("\n")
+arrow(3)
