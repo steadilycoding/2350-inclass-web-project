@@ -1,3 +1,11 @@
+import {addGuest} from './guests'
+
+document.querySelector("#guest-form").onsubmit = addGuest
+
+
+
+
+
 // Function that takes three integers and returns the largest int 
 function getMax(x, y, z) {
     if (x > y && x > z) {
