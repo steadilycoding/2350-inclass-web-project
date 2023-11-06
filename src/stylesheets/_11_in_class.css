@@ -1,0 +1,12 @@
+/* Your styles go here */
+@import url("bootstrap/dist/css/bootstrap.min.css");
+@import url("bootstrap-icons/font/bootstrap-icons.css");
+
+.jumbotron {
+    background-color: blanchedalmond;
+}
+
+#tictac td {
+    height: 50px;
+    line-height: 50px;
+}
